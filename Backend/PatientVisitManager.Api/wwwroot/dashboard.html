@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard Patient Visit Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="navbar">
+        <h2>Dashboard</h2>
+        <span id="userRole"></span>
+        <span id="userEmail" style="margin-left:8px; opacity:.8;"></span>
+        <button id="changePwdBtn" style="margin-left:auto;">Change Password</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="patients">Patients</button>
+        <button class="tab-btn" data-tab="visits">Visits</button>
+        <button class="tab-btn" data-tab="doctors">Doctors</button>
+        <button class="tab-btn" data-tab="fees">Fees</button>
+    </div>
+
+    <div id="tab-patients" class="tab-pane">
+        <div class="toolbar">
+            <input id="patientSearch" placeholder="Search patients..." />
+            <button id="addPatientBtn" class="admin-only">Add Patient</button>
+        </div>
+        <table id="patientsTbl">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>VisitID</th>
+                    <th>Visit Fee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="tab-visits" class="tab-pane" style="display:none">
+        <div class="toolbar">
+            <input id="visitSearch" placeholder="Search visits..." />
+            <button id="addVisitBtn" class="admin-only">Add Visit</button>
+        </div>
+        <table id="visitsTbl">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Duration</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Fee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="tab-doctors" class="tab-pane" style="display:none">
+        <div class="toolbar">
+            <input id="doctorSearch" placeholder="Search doctors..." />
+            <button id="addDoctorBtn" class="admin-only">Add Doctor</button>
+        </div>
+        <table id="doctorsTbl">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>VisitID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="tab-fees" class="tab-pane" style="display:none">
+        <div class="toolbar">
+            <button id="refreshFeesBtn">Refresh</button>
+        </div>
+        <table id="feesTbl">
+            <thead>
+                <tr><th>FeeID</th><th>Visit Type</th><th>Fee per Minute</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+  
+    <div id="modal" class="modal" style="display:none;">
+        <div id="modalBackdrop" class="modal-backdrop"></div>
+        <div id="modalContent" class="modal-content card">
+            <h3 id="modalTitle"></h3>
+            <div id="modalBody"></div>
+            <p id="modalError" class="error" style="display:none;"></p>
+            <div class="modal-actions">
+                <button id="modalCancel" type="button">Cancel</button>
+                <button id="modalSave" type="button">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

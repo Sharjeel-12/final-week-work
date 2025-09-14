@@ -1,0 +1,43 @@
+<div class="signup-container">
+  <h2>Sign Up</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="registerUser()">
+
+    <label for="userRole">Role</label>
+    <select id="userRole" formControlName="role">
+      <option value="Admin">Admin</option>
+      <option value="Receptionist">Receptionist</option>
+    </select>
+    @if(f['role'].touched && f['role'].invalid){
+    <div class="err-msg">A valid Role is Required</div>
+    }
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter email" formControlName="email">
+    @if(f['email'].touched && f['email'].invalid){
+    @if(f['email'].errors?.["required"]){
+    <div class="err-msg">Username is required</div>
+    }
+    @if(f['email'].errors?.["minlength"]){
+    <div class="err-msg">Username must be at least {{f['email'].errors?.['minlength'].requiredLength}} characters.</div>
+    }
+
+    }
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" formControlName="password">
+    @if(f['password'].touched && f['password'].invalid){
+    @if(f['password'].errors?.["required"]){
+    <div class="err-msg">Password is required</div>
+    }
+    @if(f['password'].errors?.["minlength"]){
+    <div class="err-msg">Password must be at least {{f['password'].errors?.['minlength'].requiredLength}} characters.
+    </div>
+    }
+
+    }
+
+
+    <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+
+  </form>
+  <a (click)="navigateToLogin()">Log In</a>
+
+</div>

@@ -1,0 +1,387 @@
+2025-08-25 11:08:42.864 +05:00 [INF] Starting PatientVisitManager (Environment=Development)
+2025-08-25 11:08:44.131 +05:00 [INF] Kestrel URLs: 
+2025-08-25 11:08:45.018 +05:00 [INF]  DB connectivity OK. Connected to database: MuhammadSharjeelFarzad_6609
+2025-08-25 11:08:45.103 +05:00 [INF] User profile is available. Using 'C:\Users\sharjeel.farzad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-25 11:08:45.112 +05:00 [INF] Creating key {1c44731f-2e61-4910-a805-f66f5776a89f} with creation date 2025-08-25 06:08:45Z, activation date 2025-08-25 06:08:45Z, and expiration date 2025-11-23 06:08:45Z.
+2025-08-25 11:08:45.127 +05:00 [INF] Writing data to file 'C:\Users\sharjeel.farzad\AppData\Local\ASP.NET\DataProtection-Keys\key-1c44731f-2e61-4910-a805-f66f5776a89f.xml'.
+2025-08-25 11:08:45.423 +05:00 [INF] Now listening on: https://localhost:49428
+2025-08-25 11:08:45.423 +05:00 [INF] Now listening on: http://localhost:49429
+2025-08-25 11:08:45.424 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 11:08:45.424 +05:00 [INF] Hosting environment: Development
+2025-08-25 11:08:45.424 +05:00 [INF] Content root path: C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api
+2025-08-25 11:09:45.028 +05:00 [INF] Starting PatientVisitManager (Environment=Development)
+2025-08-25 11:09:45.540 +05:00 [INF] Kestrel URLs: 
+2025-08-25 11:09:45.979 +05:00 [INF]  DB connectivity OK. Connected to database: MuhammadSharjeelFarzad_6609
+2025-08-25 11:09:46.032 +05:00 [INF] User profile is available. Using 'C:\Users\sharjeel.farzad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-25 11:09:46.200 +05:00 [INF] Now listening on: http://localhost:49428
+2025-08-25 11:09:46.200 +05:00 [INF] Now listening on: http://localhost:49429
+2025-08-25 11:09:46.201 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 11:09:46.201 +05:00 [INF] Hosting environment: Development
+2025-08-25 11:09:46.202 +05:00 [INF] Content root path: C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api
+2025-08-25 11:09:46.619 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/ - -
+2025-08-25 11:09:46.928 +05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-08-25 11:09:47.161 +05:00 [INF] Sending file. Request path: '//login.html'. Physical path: 'C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api\wwwroot\login.html'
+2025-08-25 11:09:47.161 +05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-08-25 11:09:47.163 +05:00 [INF] GET //login.html by anonymous -> 200 in 433 ms
+2025-08-25 11:09:47.188 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_vs/browserLink - -
+2025-08-25 11:09:47.188 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api.js - -
+2025-08-25 11:09:47.188 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-25 11:09:47.188 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/styles.css - -
+2025-08-25 11:09:47.222 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/ - - - 200 - text/html 611.3229ms
+2025-08-25 11:09:47.222 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 12377 application/javascript;+charset=utf-8 33.2688ms
+2025-08-25 11:09:47.240 +05:00 [INF] Sending file. Request path: '/styles.css'. Physical path: 'C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api\wwwroot\styles.css'
+2025-08-25 11:09:47.240 +05:00 [INF] GET /styles.css by anonymous -> 200 in 20 ms
+2025-08-25 11:09:47.240 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/styles.css - - - 200 2681 text/css 52.2886ms
+2025-08-25 11:09:47.254 +05:00 [INF] Sending file. Request path: '/api.js'. Physical path: 'C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api\wwwroot\api.js'
+2025-08-25 11:09:47.254 +05:00 [INF] GET /api.js by anonymous -> 200 in 34 ms
+2025-08-25 11:09:47.254 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api.js - - - 200 4701 text/javascript 66.4302ms
+2025-08-25 11:09:47.278 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 89.6909ms
+2025-08-25 11:09:47.304 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/favicon.ico - -
+2025-08-25 11:09:47.307 +05:00 [INF] GET /favicon.ico by anonymous -> 404 in 3 ms
+2025-08-25 11:09:47.308 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/favicon.ico - - - 404 0 - 4.2005ms
+2025-08-25 11:10:45.590 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger - -
+2025-08-25 11:10:45.591 +05:00 [INF] GET /swagger by anonymous -> 301 in 0 ms
+2025-08-25 11:10:45.592 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger - - - 301 0 - 1.7774ms
+2025-08-25 11:10:45.602 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/index.html - -
+2025-08-25 11:10:45.705 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/swagger-ui-standalone-preset.js - -
+2025-08-25 11:10:45.705 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/swagger-ui-bundle.js - -
+2025-08-25 11:10:45.705 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/swagger-ui.css - -
+2025-08-25 11:10:45.711 +05:00 [INF] GET /swagger/index.html by anonymous -> 200 in 108 ms
+2025-08-25 11:10:45.712 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/index.html - - - 200 - text/html;charset=utf-8 113.8272ms
+2025-08-25 11:10:45.714 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-25 11:10:45.714 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_vs/browserLink - -
+2025-08-25 11:10:45.714 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 12377 application/javascript;+charset=utf-8 0.4361ms
+2025-08-25 11:10:45.726 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.6135ms
+2025-08-25 11:10:45.735 +05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-08-25 11:10:45.735 +05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-08-25 11:10:45.736 +05:00 [INF] GET /swagger/swagger-ui-standalone-preset.js by anonymous -> 200 in 29 ms
+2025-08-25 11:10:45.736 +05:00 [INF] GET /swagger/swagger-ui.css by anonymous -> 200 in 29 ms
+2025-08-25 11:10:45.736 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 30.5677ms
+2025-08-25 11:10:45.736 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/swagger-ui.css - - - 200 144929 text/css 30.5927ms
+2025-08-25 11:10:45.741 +05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-08-25 11:10:45.742 +05:00 [INF] GET /swagger/swagger-ui-bundle.js by anonymous -> 200 in 36 ms
+2025-08-25 11:10:45.742 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 36.6457ms
+2025-08-25 11:10:45.880 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/v1/swagger.json - -
+2025-08-25 11:10:45.893 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/favicon-32x32.png - -
+2025-08-25 11:10:45.894 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-08-25 11:10:45.894 +05:00 [INF] GET /swagger/favicon-32x32.png by anonymous -> 200 in 0 ms
+2025-08-25 11:10:45.894 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/favicon-32x32.png - - - 200 628 image/png 1.2477ms
+2025-08-25 11:10:45.972 +05:00 [INF] GET /swagger/v1/swagger.json by anonymous -> 200 in 91 ms
+2025-08-25 11:10:45.972 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 92.3103ms
+2025-08-25 11:26:31.403 +05:00 [INF] Starting PatientVisitManager (Environment=Development)
+2025-08-25 11:26:31.716 +05:00 [INF] Kestrel URLs: 
+2025-08-25 11:26:32.070 +05:00 [INF]  DB connectivity OK. Connected to database: MuhammadSharjeelFarzad_6609
+2025-08-25 11:26:32.108 +05:00 [INF] User profile is available. Using 'C:\Users\sharjeel.farzad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-25 11:26:32.309 +05:00 [INF] Now listening on: http://localhost:49428
+2025-08-25 11:26:32.309 +05:00 [INF] Now listening on: http://localhost:49429
+2025-08-25 11:26:32.311 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 11:26:32.311 +05:00 [INF] Hosting environment: Development
+2025-08-25 11:26:32.311 +05:00 [INF] Content root path: C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api
+2025-08-25 11:26:33.337 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/ - -
+2025-08-25 11:26:33.666 +05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-08-25 11:26:33.781 +05:00 [INF] Sending file. Request path: '//login.html'. Physical path: 'C:\Users\sharjeel.farzad\Dynamic-Visuals-using-JavaScript\New folder (2)\PatientVisitManager.Api\wwwroot\login.html'
+2025-08-25 11:26:33.782 +05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-08-25 11:26:33.784 +05:00 [INF] GET //login.html by anonymous -> 200 in 212 ms
+2025-08-25 11:26:33.811 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/styles.css - -
+2025-08-25 11:26:33.811 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-25 11:26:33.816 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api.js - -
+2025-08-25 11:26:33.818 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_vs/browserLink - -
+2025-08-25 11:26:33.831 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/ - - - 200 - text/html 482.5564ms
+2025-08-25 11:26:33.831 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 12377 application/javascript;+charset=utf-8 19.6436ms
+2025-08-25 11:26:33.838 +05:00 [INF] The file /styles.css was not modified
+2025-08-25 11:26:33.838 +05:00 [INF] The file /api.js was not modified
+2025-08-25 11:26:33.839 +05:00 [INF] GET /api.js by anonymous -> 304 in 22 ms
+2025-08-25 11:26:33.839 +05:00 [INF] GET /styles.css by anonymous -> 304 in 22 ms
+2025-08-25 11:26:33.840 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api.js - - - 304 - text/javascript 23.3873ms
+2025-08-25 11:26:33.840 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/styles.css - - - 304 - text/css 36.3513ms
+2025-08-25 11:26:33.857 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 38.9059ms
+2025-08-25 11:26:41.429 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/index.html - -
+2025-08-25 11:26:41.534 +05:00 [INF] GET /swagger/index.html by anonymous -> 200 in 103 ms
+2025-08-25 11:26:41.534 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/index.html - - - 200 - text/html;charset=utf-8 105.7339ms
+2025-08-25 11:26:41.535 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-25 11:26:41.535 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 12377 application/javascript;+charset=utf-8 0.2491ms
+2025-08-25 11:26:41.537 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_vs/browserLink - -
+2025-08-25 11:26:41.547 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.5889ms
+2025-08-25 11:26:41.666 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/swagger/v1/swagger.json - -
+2025-08-25 11:26:41.765 +05:00 [INF] GET /swagger/v1/swagger.json by anonymous -> 200 in 98 ms
+2025-08-25 11:26:41.765 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 98.9376ms
+2025-08-25 11:29:13.791 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:49428/api/Auth/register application/json 79
+2025-08-25 11:29:13.841 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:29:13.848 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.AuthController.Register (PatientVisitManager.Api)'
+2025-08-25 11:29:13.899 +05:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(PatientVisitManager.Api.DTOs.RegisterRequest) on controller PatientVisitManager.Api.Controllers.AuthController (PatientVisitManager.Api).
+2025-08-25 11:29:14.107 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.AuthController.Register (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:29:14.206 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.AuthController.Register (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 94.4421ms.
+2025-08-25 11:29:14.214 +05:00 [INF] Executing CreatedResult, writing value of type '<>f__AnonymousType0`3[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-25 11:29:14.226 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.AuthController.Register (PatientVisitManager.Api) in 323.3846ms
+2025-08-25 11:29:14.226 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.AuthController.Register (PatientVisitManager.Api)'
+2025-08-25 11:29:14.226 +05:00 [INF] POST /api/Auth/register by anonymous -> 201 in 429 ms
+2025-08-25 11:29:14.227 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:49428/api/Auth/register application/json 79 - 201 - application/json;+charset=utf-8 435.4552ms
+2025-08-25 11:29:34.648 +05:00 [INF] Request starting HTTP/1.1 POST http://localhost:49428/api/Auth/login application/json 60
+2025-08-25 11:29:34.654 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:29:34.657 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.AuthController.Login (PatientVisitManager.Api)'
+2025-08-25 11:29:34.668 +05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[PatientVisitManager.Api.DTOs.LoginResponse]] Login(PatientVisitManager.Api.DTOs.LoginRequest) on controller PatientVisitManager.Api.Controllers.AuthController (PatientVisitManager.Api).
+2025-08-25 11:29:34.690 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.AuthController.Login (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:29:34.922 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.AuthController.Login (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 231.2576ms.
+2025-08-25 11:29:34.925 +05:00 [INF] Executing ObjectResult, writing value of type 'PatientVisitManager.Api.DTOs.LoginResponse'.
+2025-08-25 11:29:34.926 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.AuthController.Login (PatientVisitManager.Api) in 258.5473ms
+2025-08-25 11:29:34.926 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.AuthController.Login (PatientVisitManager.Api)'
+2025-08-25 11:29:34.927 +05:00 [INF] POST /api/Auth/login by anonymous -> 200 in 273 ms
+2025-08-25 11:29:34.927 +05:00 [INF] Request finished HTTP/1.1 POST http://localhost:49428/api/Auth/login application/json 60 - 200 - application/json;+charset=utf-8 284.2014ms
+2025-08-25 11:32:14.912 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:32:14.956 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:32:14.960 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:32:14.962 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:32:14.976 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:32:14.989 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.5696ms.
+2025-08-25 11:32:14.989 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:32:14.992 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 29.9923ms
+2025-08-25 11:32:14.992 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:32:14.993 +05:00 [INF] GET /api/Doctors by null -> 200 in 80 ms
+2025-08-25 11:32:14.993 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 80.9360ms
+2025-08-25 11:32:26.766 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Visits - -
+2025-08-25 11:32:26.767 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:32:26.769 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:32:26.782 +05:00 [INF] Route matched with {action = "GetAll", controller = "Visits"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Visit]] GetAll() on controller PatientVisitManager.Api.Controllers.VisitsController (PatientVisitManager.Api).
+2025-08-25 11:32:26.798 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:32:26.806 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.4012ms.
+2025-08-25 11:32:26.806 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Visit, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:32:26.815 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api) in 31.7813ms
+2025-08-25 11:32:26.815 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:32:26.815 +05:00 [INF] GET /api/Visits by null -> 200 in 48 ms
+2025-08-25 11:32:26.816 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Visits - - - 200 - application/json;+charset=utf-8 49.2307ms
+2025-08-25 11:33:18.886 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Visits - -
+2025-08-25 11:33:18.891 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:33:18.901 +05:00 [INF] OPTIONS /api/Visits by anonymous -> 204 in 9 ms
+2025-08-25 11:33:18.901 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Visits - - - 204 - - 15.2238ms
+2025-08-25 11:33:18.904 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Visits - -
+2025-08-25 11:33:18.904 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:33:18.904 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:33:18.906 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:33:18.906 +05:00 [INF] Route matched with {action = "GetAll", controller = "Visits"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Visit]] GetAll() on controller PatientVisitManager.Api.Controllers.VisitsController (PatientVisitManager.Api).
+2025-08-25 11:33:18.935 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:33:18.936 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.7106ms.
+2025-08-25 11:33:18.937 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Visit, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:33:18.937 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api) in 30.5238ms
+2025-08-25 11:33:18.937 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.VisitsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:33:18.937 +05:00 [INF] GET /api/Visits by null -> 200 in 33 ms
+2025-08-25 11:33:18.937 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Visits - - - 200 - application/json;+charset=utf-8 33.3630ms
+2025-08-25 11:34:33.501 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:34:33.501 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:34:33.501 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:34:33.501 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.4763ms
+2025-08-25 11:34:33.503 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:34:33.503 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:34:33.504 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:34:33.504 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:34:33.504 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:34:33.526 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:34:33.535 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.638ms.
+2025-08-25 11:34:33.536 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:34:33.537 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 32.9224ms
+2025-08-25 11:34:33.538 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:34:33.538 +05:00 [INF] GET /api/Doctors by null -> 200 in 35 ms
+2025-08-25 11:34:33.538 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 35.4719ms
+2025-08-25 11:35:41.508 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:35:41.508 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:35:41.510 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:35:41.510 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 1.5009ms
+2025-08-25 11:35:41.551 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:35:41.551 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:35:41.551 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:35:41.551 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:35:41.552 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:35:41.563 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:35:41.565 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.9445ms.
+2025-08-25 11:35:41.565 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:35:41.565 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 13.7523ms
+2025-08-25 11:35:41.565 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:35:41.565 +05:00 [INF] GET /api/Doctors by null -> 200 in 14 ms
+2025-08-25 11:35:41.566 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 48.7858ms
+2025-08-25 11:35:52.383 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:35:52.383 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:35:52.383 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:35:52.383 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.4966ms
+2025-08-25 11:35:52.385 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:35:52.385 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:35:52.385 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:35:52.385 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:35:52.385 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:35:52.403 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:35:52.405 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.9463ms.
+2025-08-25 11:35:52.405 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:35:52.405 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 19.551ms
+2025-08-25 11:35:52.405 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:35:52.405 +05:00 [INF] GET /api/Doctors by null -> 200 in 20 ms
+2025-08-25 11:35:52.405 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 20.4753ms
+2025-08-25 11:35:58.177 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:35:58.177 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:35:58.177 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:35:58.178 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.2907ms
+2025-08-25 11:35:58.179 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:35:58.179 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:35:58.179 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:35:58.180 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:35:58.180 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:35:58.197 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:35:58.199 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.8616ms.
+2025-08-25 11:35:58.200 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:35:58.200 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 20.1876ms
+2025-08-25 11:35:58.200 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:35:58.200 +05:00 [INF] GET /api/Doctors by null -> 200 in 21 ms
+2025-08-25 11:35:58.200 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 21.5332ms
+2025-08-25 11:36:03.445 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:03.445 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:03.445 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:36:03.445 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.2766ms
+2025-08-25 11:36:03.446 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:03.447 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:03.447 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:03.447 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:03.447 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:03.464 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:03.466 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.6066ms.
+2025-08-25 11:36:03.466 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:03.467 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 19.154ms
+2025-08-25 11:36:03.467 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:03.467 +05:00 [INF] GET /api/Doctors by null -> 200 in 20 ms
+2025-08-25 11:36:03.467 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 20.4354ms
+2025-08-25 11:36:07.137 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:07.137 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:07.137 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:07.137 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:07.137 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:07.157 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:07.159 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.2211ms.
+2025-08-25 11:36:07.160 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:07.160 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 22.616ms
+2025-08-25 11:36:07.160 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:07.160 +05:00 [INF] GET /api/Doctors by null -> 200 in 23 ms
+2025-08-25 11:36:07.160 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 23.7041ms
+2025-08-25 11:36:11.254 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:11.254 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:11.254 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:36:11.254 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.3154ms
+2025-08-25 11:36:11.256 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:11.256 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:11.256 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:11.257 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:11.257 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:11.283 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:11.285 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.0238ms.
+2025-08-25 11:36:11.286 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:11.286 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 28.7873ms
+2025-08-25 11:36:11.286 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:11.286 +05:00 [INF] GET /api/Doctors by null -> 200 in 29 ms
+2025-08-25 11:36:11.286 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 30.1103ms
+2025-08-25 11:36:27.138 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:27.138 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:27.138 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:36:27.138 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.4357ms
+2025-08-25 11:36:27.139 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:27.140 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:27.140 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:27.141 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:27.141 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:27.165 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:27.167 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.1757ms.
+2025-08-25 11:36:27.167 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:27.167 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 26.5142ms
+2025-08-25 11:36:27.167 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:27.168 +05:00 [INF] GET /api/Doctors by null -> 200 in 28 ms
+2025-08-25 11:36:27.168 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 28.6255ms
+2025-08-25 11:36:28.733 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:28.734 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:28.734 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:28.734 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:28.734 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:28.762 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:28.766 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.703ms.
+2025-08-25 11:36:28.766 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:28.766 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 32.1386ms
+2025-08-25 11:36:28.766 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:28.767 +05:00 [INF] GET /api/Doctors by null -> 200 in 32 ms
+2025-08-25 11:36:28.767 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 33.1546ms
+2025-08-25 11:36:31.441 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:31.441 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:31.441 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:31.442 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:31.442 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:31.464 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:31.467 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.0525ms.
+2025-08-25 11:36:31.467 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:31.467 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 24.9069ms
+2025-08-25 11:36:31.467 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:31.467 +05:00 [INF] GET /api/Doctors by null -> 200 in 26 ms
+2025-08-25 11:36:31.467 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 26.3048ms
+2025-08-25 11:36:45.277 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:45.277 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:45.277 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:36:45.277 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.8528ms
+2025-08-25 11:36:45.279 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:45.279 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:45.279 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:45.280 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:45.280 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:45.299 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:45.303 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.6967ms.
+2025-08-25 11:36:45.306 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:45.313 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 27.8367ms
+2025-08-25 11:36:45.314 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:45.314 +05:00 [INF] GET /api/Doctors by null -> 200 in 34 ms
+2025-08-25 11:36:45.314 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 34.8361ms
+2025-08-25 11:36:56.480 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:56.480 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:56.480 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 0 ms
+2025-08-25 11:36:56.480 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 0.3572ms
+2025-08-25 11:36:56.481 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:56.481 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:56.482 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:56.482 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:56.482 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:56.502 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:56.503 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.7684ms.
+2025-08-25 11:36:56.504 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:56.504 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 21.8487ms
+2025-08-25 11:36:56.504 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:56.504 +05:00 [INF] GET /api/Doctors by null -> 200 in 22 ms
+2025-08-25 11:36:56.504 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 22.5824ms
+2025-08-25 11:36:58.051 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:36:58.051 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:36:58.051 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:36:58.052 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:58.052 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:36:58.069 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:36:58.070 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1.7931ms.
+2025-08-25 11:36:58.071 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:36:58.071 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 19.0438ms
+2025-08-25 11:36:58.071 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:36:58.071 +05:00 [INF] GET /api/Doctors by null -> 200 in 19 ms
+2025-08-25 11:36:58.071 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 19.9058ms
+2025-08-25 11:37:00.993 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 11:37:00.993 +05:00 [INF] CORS policy execution successful.
+2025-08-25 11:37:00.994 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 11:37:00.994 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:37:00.994 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 11:37:01.013 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 11:37:01.017 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3.7725ms.
+2025-08-25 11:37:01.018 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 11:37:01.018 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 23.7305ms
+2025-08-25 11:37:01.018 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 11:37:01.018 +05:00 [INF] GET /api/Doctors by null -> 200 in 24 ms
+2025-08-25 11:37:01.018 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 24.7700ms
+2025-08-25 12:13:52.802 +05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - -
+2025-08-25 12:13:52.815 +05:00 [INF] CORS policy execution successful.
+2025-08-25 12:13:52.815 +05:00 [INF] OPTIONS /api/Doctors by anonymous -> 204 in 5 ms
+2025-08-25 12:13:52.815 +05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:49428/api/Doctors - - - 204 - - 14.0552ms
+2025-08-25 12:13:52.817 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api/Doctors - -
+2025-08-25 12:13:52.817 +05:00 [INF] CORS policy execution successful.
+2025-08-25 12:13:52.818 +05:00 [INF] JWT validated for Email=(no-email), Role=Admin
+2025-08-25 12:13:52.818 +05:00 [INF] Executing endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 12:13:52.818 +05:00 [INF] Route matched with {action = "GetAll", controller = "Doctors"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[PatientVisitManager.Api.Models.Doctor]] GetAll() on controller PatientVisitManager.Api.Controllers.DoctorsController (PatientVisitManager.Api).
+2025-08-25 12:13:52.832 +05:00 [INF] Executing action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) - Validation state: "Valid"
+2025-08-25 12:13:52.853 +05:00 [INF] Executed action method PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 20.8418ms.
+2025-08-25 12:13:52.853 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientVisitManager.Api.Models.Doctor, PatientVisitManager.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 12:13:52.853 +05:00 [INF] Executed action PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api) in 35.0869ms
+2025-08-25 12:13:52.853 +05:00 [INF] Executed endpoint 'PatientVisitManager.Api.Controllers.DoctorsController.GetAll (PatientVisitManager.Api)'
+2025-08-25 12:13:52.853 +05:00 [INF] GET /api/Doctors by null -> 200 in 36 ms
+2025-08-25 12:13:52.853 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api/Doctors - - - 200 - application/json;+charset=utf-8 36.3038ms

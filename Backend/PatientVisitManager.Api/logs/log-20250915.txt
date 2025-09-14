@@ -1,0 +1,25 @@
+2025-09-15 00:55:57.740 +05:00 [INF] Starting PatientVisitManager (Environment=Development)
+2025-09-15 00:55:58.267 +05:00 [INF] Kestrel URLs: 
+2025-09-15 00:55:59.221 +05:00 [INF]  DB connectivity OK. Connected to database: MuhammadSharjeelFarzadDB
+2025-09-15 00:55:59.243 +05:00 [INF] User profile is available. Using 'C:\Users\wel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-15 00:55:59.353 +05:00 [INF] Now listening on: http://localhost:49428
+2025-09-15 00:55:59.354 +05:00 [INF] Now listening on: http://localhost:49429
+2025-09-15 00:55:59.422 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-15 00:55:59.422 +05:00 [INF] Hosting environment: Development
+2025-09-15 00:55:59.422 +05:00 [INF] Content root path: E:\Cloned Repos\week-7-work\Backend\PatientVisitManager.Api
+2025-09-15 00:55:59.776 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/ - -
+2025-09-15 00:55:59.922 +05:00 [INF] The file /login.html was not modified
+2025-09-15 00:56:00.043 +05:00 [INF] GET /login.html by anonymous -> 304 in 21 ms
+2025-09-15 00:56:00.054 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/ - - - 304 - text/html 280.3735ms
+2025-09-15 00:56:00.061 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-09-15 00:56:00.062 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/api.js - -
+2025-09-15 00:56:00.100 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/_vs/browserLink - -
+2025-09-15 00:56:00.101 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:49428/styles.css - -
+2025-09-15 00:56:00.108 +05:00 [INF] The file /styles.css was not modified
+2025-09-15 00:56:00.108 +05:00 [INF] The file /api.js was not modified
+2025-09-15 00:56:00.110 +05:00 [INF] GET /styles.css by anonymous -> 304 in 7 ms
+2025-09-15 00:56:00.110 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 16531 application/javascript;+charset=utf-8 48.8603ms
+2025-09-15 00:56:00.111 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/styles.css - - - 304 - text/css 9.6092ms
+2025-09-15 00:56:00.116 +05:00 [INF] GET /api.js by anonymous -> 304 in 10 ms
+2025-09-15 00:56:00.118 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/api.js - - - 304 - text/javascript 56.8317ms
+2025-09-15 00:56:00.155 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.2410ms

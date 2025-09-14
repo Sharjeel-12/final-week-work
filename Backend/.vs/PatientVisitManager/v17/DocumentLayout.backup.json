@@ -1,0 +1,390 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Cloned Repos\\week-7-work\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\controllers\\visitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\controllers\\visitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\repositories\\sql\\activitylogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\repositories\\sql\\activitylogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\repositories\\interfaces\\iactivitylogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\repositories\\interfaces\\iactivitylogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\dtos\\visitdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\dtos\\visitdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\dtos\\patientdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\dtos\\patientdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\dtos\\doctordtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\dtos\\doctordtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\middlewares\\requestloggingtimingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\middlewares\\requestloggingtimingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\services\\requestlogwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\services\\requestlogwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\repositories\\sql\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\repositories\\sql\\doctorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\repositories\\sql\\visitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\repositories\\sql\\visitrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\repositories\\sql\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\repositories\\sql\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\validation\\crudvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\validation\\crudvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\wwwroot\\dashboard.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\wwwroot\\dashboard.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\wwwroot\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\wwwroot\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\wwwroot\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\wwwroot\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|e:\\cloned repos\\week-7-work\\backend\\patientvisitmanager.api\\wwwroot\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3F0C1463-0951-4E72-9B76-51C910A0B3B5}|PatientVisitManager.Api\\PatientVisitManager.Api.csproj|solutionrelative:patientvisitmanager.api\\wwwroot\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "app.js",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\app.js",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\wwwroot\\app.js",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\app.js",
+              "RelativeToolTip": "PatientVisitManager.Api\\wwwroot\\app.js",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAswNABAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-17T16:16:37.734Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IActivityLogRepository.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Interfaces\\IActivityLogRepository.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Repositories\\Interfaces\\IActivityLogRepository.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Interfaces\\IActivityLogRepository.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Repositories\\Interfaces\\IActivityLogRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T19:00:01.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DoctorDtos.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\DTOs\\DoctorDtos.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\DTOs\\DoctorDtos.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\DTOs\\DoctorDtos.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\DTOs\\DoctorDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:09:34.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RequestLoggingTimingMiddleware.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Middlewares\\RequestLoggingTimingMiddleware.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Middlewares\\RequestLoggingTimingMiddleware.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Middlewares\\RequestLoggingTimingMiddleware.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Middlewares\\RequestLoggingTimingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T15:15:01.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Program.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Program.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Program.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Program.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAYwIIAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T18:53:50.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Controllers\\PatientsController.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Controllers\\PatientsController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwDAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T10:07:07.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Controllers\\DoctorsController.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Controllers\\DoctorsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:07:36.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VisitsController.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Controllers\\VisitsController.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Controllers\\VisitsController.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Controllers\\VisitsController.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Controllers\\VisitsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T10:22:31.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ActivityLogRepository.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\ActivityLogRepository.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Repositories\\Sql\\ActivityLogRepository.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\ActivityLogRepository.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Repositories\\Sql\\ActivityLogRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T19:00:44.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Repositories\\Sql\\PatientRepository.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\PatientRepository.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Repositories\\Sql\\PatientRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwDAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T13:31:33.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "VisitRepository.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\VisitRepository.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Repositories\\Sql\\VisitRepository.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\VisitRepository.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Repositories\\Sql\\VisitRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwDgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T10:29:19.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RequestLogWriter.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Services\\RequestLogWriter.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Services\\RequestLogWriter.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Services\\RequestLogWriter.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Services\\RequestLogWriter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:33:45.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientDtos.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\DTOs\\PatientDtos.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\DTOs\\PatientDtos.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\DTOs\\PatientDtos.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\DTOs\\PatientDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T10:06:05.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VisitDtos.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\DTOs\\VisitDtos.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\DTOs\\VisitDtos.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\DTOs\\VisitDtos.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\DTOs\\VisitDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T11:14:30.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PatientVisitManager.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-07T11:58:43.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Services\\AuthService.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Services\\AuthService.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Services\\AuthService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwDQAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T11:02:40.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\appsettings.json",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\appsettings.json",
+              "RelativeToolTip": "PatientVisitManager.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-24T18:51:01.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DoctorRepository.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\DoctorRepository.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Repositories\\Sql\\DoctorRepository.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Repositories\\Sql\\DoctorRepository.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Repositories\\Sql\\DoctorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T07:10:34.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CrudValidators.cs",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Validation\\CrudValidators.cs",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\Validation\\CrudValidators.cs",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\Validation\\CrudValidators.cs",
+              "RelativeToolTip": "PatientVisitManager.Api\\Validation\\CrudValidators.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T10:09:11.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "api.js",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\api.js",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\wwwroot\\api.js",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\api.js",
+              "RelativeToolTip": "PatientVisitManager.Api\\wwwroot\\api.js",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-17T16:16:29.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "styles.css",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\styles.css",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\wwwroot\\styles.css",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\styles.css",
+              "RelativeToolTip": "PatientVisitManager.Api\\wwwroot\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-17T16:16:15.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "dashboard.html",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\dashboard.html",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\wwwroot\\dashboard.html",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\dashboard.html",
+              "RelativeToolTip": "PatientVisitManager.Api\\wwwroot\\dashboard.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-17T16:16:03.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "login.html",
+              "DocumentMoniker": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\login.html",
+              "RelativeDocumentMoniker": "PatientVisitManager.Api\\wwwroot\\login.html",
+              "ToolTip": "E:\\Cloned Repos\\week-7-work\\Backend\\PatientVisitManager.Api\\wwwroot\\login.html",
+              "RelativeToolTip": "PatientVisitManager.Api\\wwwroot\\login.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-17T16:15:51.966Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

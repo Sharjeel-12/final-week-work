@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "PatientVisitManager.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:49428;http://localhost:49429"
+    }
+  }
+}

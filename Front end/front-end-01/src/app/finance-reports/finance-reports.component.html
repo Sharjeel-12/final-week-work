@@ -1,0 +1,123 @@
+<h2 class="title">Finance Reports</h2>
+
+<div class="tabs">
+  <button [class.active]="tab==='outstanding'" (click)="tab='outstanding'">Outstanding Balances</button>
+  <button [class.active]="tab==='collections'" (click)="tab='collections'">Daily Collections</button>
+</div>
+
+<!-- OUTSTANDING -->
+@if (tab === 'outstanding') {
+  <div class="panel card">
+    <div class="filters">
+      <div>
+        <label>Up to date</label>
+        <input type="date" [(ngModel)]="upTo">
+      </div>
+      <div>
+        <label>Min balance</label>
+        <input type="number" min="0" step="0.01" [(ngModel)]="minBalance">
+      </div>
+      <div class="grow">
+        <label>Patient name contains</label>
+        <input type="text" [(ngModel)]="q" placeholder="e.g. Smith">
+      </div>
+      <div class="actions">
+        <button (click)="loadOutstanding()" [disabled]="loadingOutstanding">Load</button>
+        <button (click)="exportOutstandingCsv()" [disabled]="!outstanding?.length">Export CSV</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th class="t-center">Notes</th>
+            <th class="t-right">Billed</th>
+            <th class="t-right">Paid</th>
+            <th class="t-right">Balance</th>
+            <th>Last Visit</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of outstanding; track r.patientID) {
+            <tr>
+              <td>{{ r.patientName }}</td>
+              <td class="t-center">{{ r.notesCount }}</td>
+              <td class="t-right">{{ fmtMoney(r.totalBilled) }}</td>
+              <td class="t-right">{{ fmtMoney(r.totalPaid) }}</td>
+              <td class="t-right" [class.negative]="r.balance>0">{{ fmtMoney(r.balance) }}</td>
+              <td>{{ r.lastVisitDate ? (r.lastVisitDate | date:'medium') : '—' }}</td>
+            </tr>
+          }
+          @if (!outstanding?.length) {
+            <tr><td colspan="6" class="empty">No rows</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+}
+
+<!-- COLLECTIONS -->
+@if (tab === 'collections') {
+  <div class="panel card">
+    <div class="filters">
+      <div>
+        <label>Date</label>
+        <input type="date" [(ngModel)]="collDate">
+      </div>
+      <div class="actions">
+        <button (click)="loadCollections()" [disabled]="loadingCollections">Load</button>
+        <button (click)="exportCollectionsCsv()" [disabled]="!collections?.rows?.length">Export CSV</button>
+      </div>
+    </div>
+
+    @if (collections) {
+      <div class="totals">
+        <div class="pill">
+          <div class="label">Total</div>
+          <div class="value strong">{{ fmtMoney(collections.total) }}</div>
+        </div>
+        @for (m of keys(collections?.byMethod); track m) {
+          <div class="pill">
+            <div class="label">{{ m | titlecase }}</div>
+            <div class="value">{{ fmtMoney(collections.byMethod[m]) }}</div>
+          </div>
+        }
+      </div>
+    }
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Method</th>
+            <th>Reference</th>
+            <th class="t-right">Amount</th>
+            <th>Patient</th>
+            <th>By</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of (collections?.rows || []); track r.paymentID) {
+            <tr>
+              <td>{{ r.createdAt | date:'medium' }}</td>
+              <td><span class="badge">{{ r.method | titlecase }}</span></td>
+              <td><span class="mono">{{ r.reference || '—' }}</span></td>
+              <td class="t-right strong">{{ fmtMoney(r.amount) }}</td>
+              <td>{{ r.patientName }}</td>
+              <td>{{ r.createdByName || r.createdBy || '—' }}</td>
+            </tr>
+          }
+          @if (!(collections?.rows?.length)) {
+            <tr><td colspan="6" class="empty">No payments for this date</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+}
+
+@if (message) { <div class="message error">{{ message }}</div> }

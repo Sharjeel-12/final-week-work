@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fee Schedule</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 60%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+
+    thead {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+      background-color: #e9f5ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Fee Schedule</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>feeID</th>
+        <th>Visit Type</th>
+        <th>feePerMinute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Follow-Up</td><td>300.00</td></tr>
+      <tr><td>2</td><td>Emergency</td><td>1000.00</td></tr>
+      <tr><td>3</td><td>Consultation</td><td>500.00</td></tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

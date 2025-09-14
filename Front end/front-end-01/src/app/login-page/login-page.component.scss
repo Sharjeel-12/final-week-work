@@ -1,0 +1,94 @@
+/* General page styling (optional) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+
+}
+.err-msg{
+    color: red;
+}
+/* Container */
+.login-container {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Heading */
+.login-container h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form labels */
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Inputs */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit button */
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.login-container button[disabled] {
+  background-color: #a0c4ff;
+  cursor: not-allowed;
+}
+
+/* Sign up link */
+.login-container a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}

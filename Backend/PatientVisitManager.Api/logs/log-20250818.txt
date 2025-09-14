@@ -1,0 +1,52 @@
+2025-08-18 00:03:55.357 +05:00 [INF] Starting PatientVisitManager (Environment=Development)
+2025-08-18 00:03:55.639 +05:00 [INF] Kestrel URLs: 
+2025-08-18 00:03:56.156 +05:00 [INF]  DB connectivity OK. Connected to database: MuhammadSharjeelFarzadDB
+2025-08-18 00:03:56.186 +05:00 [INF] User profile is available. Using 'C:\Users\wel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 00:03:56.396 +05:00 [INF] Now listening on: https://localhost:49428
+2025-08-18 00:03:56.396 +05:00 [INF] Now listening on: http://localhost:49429
+2025-08-18 00:03:56.470 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 00:03:56.470 +05:00 [INF] Hosting environment: Development
+2025-08-18 00:03:56.471 +05:00 [INF] Content root path: F:\CureMD Work\New folder (2)\PatientVisitManager.Api
+2025-08-18 00:03:56.593 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/ - -
+2025-08-18 00:03:57.034 +05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-08-18 00:03:57.047 +05:00 [INF] The file //login.html was not modified
+2025-08-18 00:03:57.048 +05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-08-18 00:03:57.049 +05:00 [INF] GET //login.html by anonymous -> 304 in 48 ms
+2025-08-18 00:03:57.053 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/ - - - 304 - text/html 462.4013ms
+2025-08-18 00:03:57.067 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-18 00:03:57.067 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/styles.css - -
+2025-08-18 00:03:57.067 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_vs/browserLink - -
+2025-08-18 00:03:57.067 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/api.js - -
+2025-08-18 00:03:57.072 +05:00 [INF] The file /api.js was not modified
+2025-08-18 00:03:57.072 +05:00 [INF] The file /styles.css was not modified
+2025-08-18 00:03:57.072 +05:00 [INF] GET /styles.css by anonymous -> 304 in 4 ms
+2025-08-18 00:03:57.072 +05:00 [INF] GET /api.js by anonymous -> 304 in 4 ms
+2025-08-18 00:03:57.074 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/styles.css - - - 304 - text/css 6.9255ms
+2025-08-18 00:03:57.074 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/api.js - - - 304 - text/javascript 6.8657ms
+2025-08-18 00:03:57.089 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 16531 application/javascript;+charset=utf-8 21.7651ms
+2025-08-18 00:03:57.111 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.8350ms
+2025-08-18 00:04:03.747 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/swagger/index.html - -
+2025-08-18 00:04:03.803 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_vs/browserLink - -
+2025-08-18 00:04:03.804 +05:00 [INF] GET /swagger/index.html by anonymous -> 200 in 53 ms
+2025-08-18 00:04:03.811 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-18 00:04:03.812 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/swagger/index.html - - - 200 - text/html;charset=utf-8 64.2686ms
+2025-08-18 00:04:03.812 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 16531 application/javascript;+charset=utf-8 1.2879ms
+2025-08-18 00:04:03.820 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 16.4493ms
+2025-08-18 00:04:03.857 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/swagger/v1/swagger.json - -
+2025-08-18 00:04:03.869 +05:00 [INF] GET /swagger/v1/swagger.json by anonymous -> 200 in 11 ms
+2025-08-18 00:04:03.869 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.6342ms
+2025-08-18 00:04:14.427 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-18 00:04:14.428 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 16531 application/javascript;+charset=utf-8 1.7002ms
+2025-08-18 00:15:08.046 +05:00 [INF] Starting PatientVisitManager (Environment=Development)
+2025-08-18 00:15:08.197 +05:00 [INF] Kestrel URLs: 
+2025-08-18 00:15:08.509 +05:00 [INF]  DB connectivity OK. Connected to database: MuhammadSharjeelFarzadDB
+2025-08-18 00:15:08.532 +05:00 [INF] User profile is available. Using 'C:\Users\wel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 00:15:08.678 +05:00 [INF] Now listening on: https://localhost:49428
+2025-08-18 00:15:08.679 +05:00 [INF] Now listening on: http://localhost:49429
+2025-08-18 00:15:08.757 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 00:15:08.757 +05:00 [INF] Hosting environment: Development
+2025-08-18 00:15:08.757 +05:00 [INF] Content root path: F:\CureMD Work\New folder (2)\PatientVisitManager.Api
+2025-08-18 00:15:09.103 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_vs/browserLink - -
+2025-08-18 00:15:09.103 +05:00 [INF] Request starting HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - -
+2025-08-18 00:15:09.169 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_framework/aspnetcore-browser-refresh.js - - - 200 16531 application/javascript;+charset=utf-8 67.6444ms
+2025-08-18 00:15:09.200 +05:00 [INF] Request finished HTTP/2 GET https://localhost:49428/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.1436ms

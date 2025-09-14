@@ -1,0 +1,60 @@
+<div class="calendar-header">
+  <div class="left">
+    <label for="provider">Provider</label>
+    <select [formControl]="selectedDoctorId" id="provider">
+      @for (d of AllDoctors; track d.doctorID) {
+        <option [ngValue]="d.doctorID">{{ d.doctorName }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="center">
+    <button type="button" (click)="goPrevWeek()">◀ Prev</button>
+    <button type="button" (click)="goThisWeek()">This Week</button>
+    <button type="button" (click)="goNextWeek()">Next ▶</button>
+  </div>
+
+  <div class="right">
+    <span class="range">{{ weekRangeLabel }}</span>
+  </div>
+</div>
+
+<div class="calendar-grid">
+  <!-- Header row -->
+  <div class="time-col header"></div>
+  @for (d of weekDaysArr; let di = $index; track d) {
+    <div class="day header">
+      <div class="day-name">{{ d | date:'EEE' }}</div>
+      <div class="day-date">{{ d | date:'MMM d' }}</div>
+    </div>
+  }
+
+  <!-- Body rows: one per hour -->
+  @for (hour of hours; let hi = $index; track hour) {
+    <div class="time-col">
+      {{ (DAY_START_HOUR + hour) | number:'2.0-0' }}:00
+    </div>
+
+    @for (d of weekDaysArr; let di = $index; track d) {
+      <div class="day-cell">
+        <div class="hour-stack">
+          @for (q of quarters; let qi = $index; track qi) {
+            <div
+              class="slot"
+              [class.booked]="gridSlots[di][hi][qi]?.status === 'booked'">
+              <span *ngIf="gridSlots[di][hi][qi]?.status === 'booked'">
+                #{{ gridSlots[di][hi][qi]?.visit?.visitID }}
+                • {{ gridSlots[di][hi][qi]?.visit?.visitType }}
+              </span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  }
+</div>
+
+<div class="legend">
+  <span class="chip free"></span> Free
+  <span class="chip booked"></span> Booked
+</div>

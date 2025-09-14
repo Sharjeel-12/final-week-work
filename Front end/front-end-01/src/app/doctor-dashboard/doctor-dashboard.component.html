@@ -1,0 +1,161 @@
+<h2>Doctors</h2>
+
+<!-- Search + page size -->
+<div style="display:flex; gap:24px; align-items:flex-end; margin-bottom:12px;">
+  <div>
+    <label for="search-field">Search doctor record here</label><br />
+    <input
+      type="text"
+      id="search-field"
+      placeholder="Search doctors by any column..."
+      [formControl]="searchFC"
+      style="min-width:320px;"
+    />
+  </div>
+
+  <div>
+    <label for="pageSize">Records per page</label><br />
+    <select id="pageSize" [value]="pageSize" (change)="changePageSize(($any($event.target).value))">
+      @for (sz of pageSizeOptions; track sz) {
+        <option [value]="sz">{{ sz }}</option>
+      }
+    </select>
+  </div>
+</div>
+
+<button (click)="activateForm()" class="add-btn">+Add New Doctor</button>
+
+@if (AddBtnPressed) {
+  <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()" id="addDoctorForm" class="doctor-form">
+    <div>
+      <label for="doctorID">Doctor ID</label><br />
+      <input formControlName="doctorID" type="number" id="doctorID" name="doctorID" />
+      @if (AddForm['doctorID'].touched && AddForm['doctorID'].invalid) {
+        <div class="err-msg">Enter a valid doctor ID</div>
+      }
+    </div>
+
+    <div>
+      <label for="doctorName">Doctor Name</label><br />
+      <input formControlName="doctorName" type="text" id="doctorName" name="doctorName" />
+      @if (AddForm['doctorName'].touched && AddForm['doctorName'].invalid) {
+        <div class="err-msg">Enter a valid doctor Name</div>
+      }
+    </div>
+
+    <div>
+      <label for="doctorEmail">Doctor Email</label><br />
+      <input formControlName="doctorEmail" type="text" id="doctorEmail" name="doctorEmail" />
+      @if (AddForm['doctorEmail'].touched && AddForm['doctorEmail'].invalid) {
+        @if (AddForm['doctorEmail'].errors?.['required']) {
+          <div class="err-msg">Username is required</div>
+        }
+        @if (AddForm['doctorEmail'].errors?.['minlength']) {
+          <div class="err-msg">
+            Username must be at least
+            {{ AddForm['doctorEmail'].errors?.['minlength'].requiredLength }} characters.
+          </div>
+        }
+      }
+    </div>
+
+    <div>
+      <label for="doctorPhone">Doctor Phone</label><br />
+      <input formControlName="doctorPhone" type="text" id="doctorPhone" name="doctorPhone" />
+      @if (AddForm['doctorPhone'].touched && AddForm['doctorPhone'].invalid) {
+        <div class="err-msg">Enter a valid doctor Phone</div>
+      }
+    </div>
+
+    <div>
+      <label for="specialization">Doctor Description</label><br />
+      <textarea formControlName="specialization" id="specialization" name="specialization"></textarea>
+    </div>
+
+    <div>
+      <button [disabled]="!(addDoctorForm.valid)" type="submit">Add Doctor</button>
+      <button type="button" (click)="deactivateForm()">cancel</button>
+    </div>
+  </form>
+}
+
+@if (EditBtnPressed) {
+  <form [formGroup]="editDoctorForm" (ngSubmit)="onEdit()" id="editDoctorForm" class="doctor-form">
+    <div>
+      <label for="doctorID">Doctor ID</label><br />
+      <input formControlName="doctorID" type="number" id="doctorID" name="doctorID" />
+      @if (EditForm['doctorID'].touched && EditForm['doctorID'].invalid) {
+        <div class="err-msg">Enter a valid doctor ID</div>
+      }
+    </div>
+
+    <div>
+      <label for="visitID">Visit ID</label><br />
+      <input formControlName="visitID" type="number" id="visitID" name="visitID" />
+    </div>
+
+    <div>
+      <label for="doctorName">Doctor Name</label><br />
+      <input formControlName="doctorName" type="text" id="doctorName" name="doctorName" />
+      @if (EditForm['doctorName'].touched && EditForm['doctorName'].invalid) {
+        <div class="err-msg">Enter a valid doctor Name</div>
+      }
+    </div>
+
+    <div>
+      <label for="doctorEmail">Doctor Email</label><br />
+      <input formControlName="doctorEmail" type="text" id="doctorEmail" name="doctorEmail" />
+      @if (EditForm['doctorEmail'].touched && EditForm['doctorEmail'].invalid) {
+        @if (EditForm['doctorEmail'].errors?.['required']) {
+          <div class="err-msg">Username is required</div>
+        }
+        @if (EditForm['doctorEmail'].errors?.['minlength']) {
+          <div class="err-msg">
+            Username must be at least
+            {{ EditForm['doctorEmail'].errors?.['minlength'].requiredLength }} characters.
+          </div>
+        }
+      }
+    </div>
+
+    <div>
+      <label for="doctorPhone">Doctor Phone</label><br />
+      <input formControlName="doctorPhone" type="text" id="doctorPhone" name="doctorPhone" />
+      @if (EditForm['doctorPhone'].touched && EditForm['doctorPhone'].invalid) {
+        <div class="err-msg">this can't be blank</div>
+      }
+    </div>
+
+    <div>
+      <label for="specialization">Doctor Description</label><br />
+      <textarea formControlName="specialization" id="specialization" name="specialization"></textarea>
+    </div>
+
+    <div>
+      <button [disabled]="!(editDoctorForm.valid)" type="submit">Edit Doctor Details</button>
+      <button type="button" (click)="deactivateEditForm()">cancel</button>
+    </div>
+  </form>
+}
+
+<!-- ✅ AG Grid uses its own sort/filter/pagination -->
+<div class="ag-theme-quartz" style="width:100%; border:1px solid #e0e0e0; padding-bottom:1px;">
+  <ag-grid-angular
+    [rowData]="AllDoctors || []"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [domLayout]="'autoHeight'"
+    [rowHeight]="38"
+    [headerHeight]="42"
+    [pagination]="true"
+    [paginationPageSize]="pageSize"
+    [overlayNoRowsTemplate]="'No doctors to display'"
+    (gridReady)="onGridReady($event)"
+    (firstDataRendered)="onFirstDataRendered($event)"
+  ></ag-grid-angular>
+</div>
+
+<!-- page size only (pagination UI is built-in inside the grid) -->
+<div style="margin-top:8px; font-size:12px; opacity:.75">
+  Page size: {{ pageSize }} • Rows: {{ AllDoctors?.length || 0 }}
+</div>

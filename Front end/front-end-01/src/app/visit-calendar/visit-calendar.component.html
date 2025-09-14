@@ -1,0 +1,17 @@
+<div style="display:flex; gap:16px; align-items:flex-end; margin-bottom:12px;">
+    <div>
+        <label for="doctorFilter"><strong>Provider</strong></label><br />
+        <select id="doctorFilter" [value]="doctorFilter" (change)="onDoctorFilterChange(($any($event.target).value))">
+            <option value="ALL">All providers</option>
+            @for (d of doctors; track d.doctorID) {
+            <option [value]="d.doctorID">{{ d.doctorName }}</option>
+            }
+        </select>
+    </div>
+
+    @if (loading) { <span>Loading…</span> }
+    @if (error) { <span style="color:#b00020">{{ error }}</span> }
+    <span style="opacity:.7">Events: {{ eventCount }}</span>
+</div>
+
+<full-calendar [options]="calendarOptions"></full-calendar>

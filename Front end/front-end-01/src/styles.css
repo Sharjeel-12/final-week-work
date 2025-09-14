@@ -1,0 +1,14 @@
+
+
+/* Simple dashboard nav buttons */
+.dash-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0 24px;
+}
+.dash-buttons button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}

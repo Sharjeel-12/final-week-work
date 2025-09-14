@@ -1,0 +1,235 @@
+<h2 class="section-title">Visits</h2>
+
+<!-- Page size (AG Grid pagination) -->
+<div class="toolbar" style="display:flex; gap:24px; align-items:flex-end; margin-bottom:12px;">
+  <div>
+    <label for="page-size">Records per page</label><br/>
+    <select id="pageSize" [value]="pageSize" (change)="changePageSize(($any($event.target).value))">
+      @for (sz of pageSizeOptions; track sz) {
+        <option [value]="sz">{{ sz }}</option>
+      }
+    </select>
+  </div>
+</div>
+
+<button (click)="activateForm()" class="add-btn">+ Add New Visit</button>
+
+<!-- ADD FORM -->
+@if (AddBtnPressed) {
+  <form [formGroup]="addVisitForm" (ngSubmit)="onSubmit()" id="addVisitForm" class="visit-form">
+    <div>
+      <label for="visitID">Visit ID</label><br />
+      <input formControlName="visitID" type="number" id="visitID" name="visitID" readonly />
+    </div>
+
+    <div>
+      <label for="patientID">Patient</label><br />
+      <select formControlName="patientID" id="patientID" name="patientID">
+        <option [ngValue]="null" disabled>Select a patient</option>
+        @for (p of AllPatients; track p.patientID) {
+          <option [ngValue]="p.patientID">{{ p.patientName }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for="doctorID">Doctor</label><br />
+      <select formControlName="doctorID" id="doctorID" name="doctorID">
+        <option [ngValue]="null" disabled>Select a doctor</option>
+        @for (d of AllDoctors; track d.doctorID) {
+          <option [ngValue]="d.doctorID">{{ d.doctorName }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for="visitType">Visit Type</label><br />
+      <select formControlName="visitType" id="visitType" name="visitType">
+        <option [ngValue]="null" disabled>Select the visit type</option>
+        <option [ngValue]="'Consultation'">Consultation</option>
+        <option [ngValue]="'Follow-Up'">Follow-Up</option>
+        <option [ngValue]="'Emergency'">Emergency</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="visitDuration">Visit Duration (min)</label><br />
+      <select formControlName="visitDuration" id="visitDuration" name="visitDuration">
+        <option [ngValue]="null" disabled>Select the duration (min)</option>
+        @for (duration of durationOptions; track duration) {
+          <option [ngValue]="duration">{{ duration }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for="visitDate">Visit Date/Time</label><br />
+      <input
+        formControlName="visitDate"
+        type="datetime-local"
+        id="visitDate"
+        name="visitDate"
+        businessHours
+        businessHoursStart="09:00"
+        businessHoursEnd="21:00"
+        businessHoursDays="1,2,3,4,5,6"
+      />
+    </div>
+
+    <div>
+      <label for="status">Status</label><br/>
+      <select formControlName="status" id="status" name="status">
+        <option [ngValue]="'pending'">Pending</option>
+        <option [ngValue]="'scheduled'">Scheduled</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="addVisitForm.invalid">Add Visit</button>
+      <button type="button" (click)="deactivateForm()">Cancel</button>
+    </div>
+  </form>
+}
+
+<!-- EDIT FORM -->
+@if (EditBtnPressed) {
+  <form [formGroup]="editVisitForm" (ngSubmit)="onEdit()" id="editVisitForm" class="visit-form">
+    <div>
+      <label for="e_visitID">Visit ID</label><br />
+      <input formControlName="visitID" type="number" id="e_visitID" name="visitID" readonly />
+    </div>
+
+    <div>
+      <label for="e_patientID">Patient</label><br />
+      <select formControlName="patientID" id="e_patientID" name="patientID">
+        @for (p of AllPatients; track p.patientID) {
+          <option [ngValue]="p.patientID">{{ p.patientName }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for="e_doctorID">Doctor</label><br />
+      <select formControlName="doctorID" id="e_doctorID" name="doctorID">
+        @for (d of AllDoctors; track d.doctorID) {
+          <option [ngValue]="d.doctorID">{{ d.doctorName }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for="e_visitType">Visit Type</label><br />
+      <select formControlName="visitType" id="e_visitType" name="visitType">
+        <option [ngValue]="'Consultation'">Consultation</option>
+        <option [ngValue]="'Follow-Up'">Follow-Up</option>
+        <option [ngValue]="'Emergency'">Emergency</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="e_visitDuration">Visit Duration (min)</label><br />
+      <select formControlName="visitDuration" id="e_visitDuration" name="visitDuration">
+        @for (duration of durationOptions; track duration) {
+          <option [ngValue]="duration">{{ duration }}</option>
+        }
+      </select>
+    </div>
+
+    <div>
+      <label for="e_visitDate">Visit Date/Time</label><br />
+      <input
+        formControlName="visitDate"
+        type="datetime-local"
+        id="e_visitDate"
+        name="visitDate"
+        businessHours
+        businessHoursStart="09:00"
+        businessHoursEnd="21:00"
+        businessHoursDays="1,2,3,4,5,6"
+      />
+    </div>
+
+    <div>
+      <label for="e_status">Status</label><br/>
+      <select formControlName="status" id="e_status" name="status">
+        <option [ngValue]="'pending'">Pending</option>
+        <option [ngValue]="'scheduled'">Scheduled</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit" [disabled]="editVisitForm.invalid">Update Visit</button>
+      <button type="button" (click)="deactivateEditForm()">Cancel</button>
+    </div>
+  </form>
+}
+
+<!-- Conflict Panel -->
+@if (showConflictPanel) {
+  <div class="dup-panel" style="margin:16px 0; padding:12px; border:1px solid #ddd; border-radius:8px; background:#fffaf0;">
+    <h3 style="margin:0 0 8px;">Potential scheduling conflict(s) detected</h3>
+    <p style="margin:0 0 8px;">
+      Review the overlaps before proceeding.
+      @if(hardConflict){
+        <strong style="color:#b00020;">A hard conflict exists (same doctor overlapping). Submission is disabled.</strong>
+      }
+    </p>
+
+    <table class="visits-table">
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Visit ID</th>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date/Time</th>
+          <th>Duration</th>
+          <th>Why suggested</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (c of conflictCandidates; track c.visit.visitID) {
+          <tr>
+            <td>{{ (c.score * 100) | number:'1.0-0' }}%</td>
+            <td>{{ c.visit.visitID }}</td>
+            <td>{{ c.visit.patientID | patientName: AllPatients }}</td>
+            <td>{{ c.visit.doctorID | doctorName: AllDoctors }}</td>
+            <td>{{ c.visit.visitDate | date:'medium' }}</td>
+            <td>{{ c.visit.visitDuration }} min</td>
+            <td>
+              <ul style="margin:0; padding-left:18px;">
+                @for (r of c.reasons; track r) { <li>{{ r }}</li> }
+              </ul>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <div style="display:flex; gap:8px; margin-top:10px;">
+      <button type="button" (click)="proceedAnyway()" [disabled]="hardConflict">Submit anyway</button>
+      <button type="button" (click)="cancelConflictPanel()">Cancel</button>
+    </div>
+  </div>
+}
+
+<!-- ✅ AG Grid (built-in sort/filter/pagination) -->
+<div class="ag-theme-quartz" style="width:100%; border:1px solid #e0e0e0; padding-bottom:1px;">
+  <ag-grid-angular
+    [rowData]="AllVisits || []"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [domLayout]="'autoHeight'"
+    [rowHeight]="38"
+    [headerHeight]="42"
+    [pagination]="true"
+    [paginationPageSize]="pageSize"
+    [overlayNoRowsTemplate]="'No visits to display'"
+    (gridReady)="onGridReady($event)"
+    (firstDataRendered)="onFirstDataRendered($event)"
+  ></ag-grid-angular>
+</div>
+
+<div style="margin-top:8px; font-size:12px; opacity:.75">
+  Page size: {{ pageSize }} • Rows: {{ AllVisits?.length || 0 }}
+</div>

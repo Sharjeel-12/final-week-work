@@ -1,0 +1,31 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="validateUser()">
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter username" formControlName="email">
+    @if((f['email'].touched || f['email'].dirty) && f['email'].invalid){
+    @if(f['email'].errors?.["required"]){
+    <div class="err-msg">Username is required</div>
+    }
+    @if(f['email'].errors?.["minlength"]){
+    <div class="err-msg">Username must be at least {{f['email'].errors?.['minlength'].requiredLength}} characters.</div>
+    }
+
+    }
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" formControlName="password">
+    @if(f['password'].touched && f['password'].invalid){
+    @if(f['password'].errors?.["required"]){
+    <div class="err-msg">Password is required</div>
+    }
+    @if(f['password'].errors?.["minlength"]){
+    <div class="err-msg">Password must be at least {{f['password'].errors?.['minlength'].requiredLength}} characters.</div>
+    }
+
+    }
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+
+  </form>
+  <a (click)="navigateToSignUp()">Sign Up</a>
+</div>

@@ -1,0 +1,94 @@
+/* General styling (if not already applied) */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.err-msg{
+    color: red;
+}
+/* Container */
+.signup-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Heading */
+.signup-container h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form labels */
+.signup-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Inputs */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"], .signup-container select{
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.signup-container input:focus {
+  border-color: #28a745; /* green highlight for signup */
+  outline: none;
+}
+
+/* Submit button */
+.signup-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-container button[type="submit"]:hover {
+  background-color: #1e7e34;
+}
+
+.signup-container button[disabled] {
+  background-color: #b2e0c8;
+  cursor: not-allowed;
+}
+
+/* Login link */
+.signup-container a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #28a745;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}

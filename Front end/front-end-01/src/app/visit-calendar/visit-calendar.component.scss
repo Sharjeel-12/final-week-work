@@ -1,0 +1,49 @@
+/* -------- Month (dayGrid) tweaks -------- */
+:host ::ng-deep .fc-daygrid-event-dot { display: none; }
+:host ::ng-deep .fc-daygrid-event { padding: 2px 4px; }
+
+/* our two-line layout used in all views */
+:host ::ng-deep .fc-visit { line-height: 1.2; }
+:host ::ng-deep .fc-visit .line1 {
+  font-weight: 600;
+  display: flex;
+  gap: .35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+:host ::ng-deep .fc-visit .time { font-weight: 600; }
+:host ::ng-deep .fc-visit .patient {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+:host ::ng-deep .fc-visit .line2 {
+  color: #555;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* -------- Week/Day (timeGrid) clean-up -------- */
+/* Hide the default time+title because we render our own */
+:host ::ng-deep .fc-timegrid-event .fc-event-time,
+:host ::ng-deep .fc-timegrid-event .fc-event-title { display: none; }
+
+/* Give timeGrid events a bit of padding and let text wrap neatly */
+:host ::ng-deep .fc-timegrid-event .fc-event-main { padding: 4px 6px; }
+
+/* Keep our two lines compact in timeGrid blocks */
+:host ::ng-deep .fc-timegrid-event .fc-visit .line1 {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+:host ::ng-deep .fc-timegrid-event .fc-visit .line2 {
+  font-size: 11px;
+  opacity: .9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

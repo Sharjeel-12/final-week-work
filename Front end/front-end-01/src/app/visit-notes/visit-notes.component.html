@@ -1,0 +1,209 @@
+<h2 class="section-title">Visit Notes</h2>
+
+<div class="toolbar">
+  <div class="toolbar__left">
+    <label>Records per page</label><br/>
+    <select [value]="pageSize" (change)="changePageSize(($any($event.target).value))">
+      @for (sz of pageSizeOptions; track sz) { <option [value]="sz">{{ sz }}</option> }
+    </select>
+  </div>
+  <button (click)="activateAdd()" class="btn btn-primary">+ Add Visit Note</button>
+</div>
+
+<!-- ADD FORM -->
+@if (AddBtnPressed) {
+  <form [formGroup]="addForm" (ngSubmit)="createNote()" class="card form">
+    <div class="form__row">
+      <div class="form__field">
+        <label>Visit (scheduled only)</label>
+        <select formControlName="visitID">
+          <option [ngValue]="null" disabled>Select a visit</option>
+          @for (v of availableVisitsForNote; track v.visitID) {
+            <option [ngValue]="v.visitID">
+              #{{ v.visitID }} — {{ v.visitDate | date:'medium' }}
+              • {{ v.visitType || 'Visit' }}
+              • Patient: {{ v.patientID | patientName: AllPatients }}
+              • Doctor: {{ v.doctorID | doctorName: AllDoctors }}
+            </option>
+          }
+        </select>
+        @if (!availableVisitsForNote.length) {
+          <div class="hint">No scheduled visits without notes.</div>
+        }
+      </div>
+
+      <div class="form__field form__field--grow">
+        <label>Notes</label>
+        <textarea rows="3" formControlName="visitNotes" placeholder="Write clinical notes..."></textarea>
+      </div>
+    </div>
+
+    <div class="form__actions">
+      <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid || !availableVisitsForNote.length">
+        Create
+      </button>
+      <button type="button" class="btn" (click)="cancelAdd()">Cancel</button>
+    </div>
+  </form>
+}
+
+
+<!-- EDIT FORM -->
+@if (EditBtnPressed) {
+  <form [formGroup]="editForm" (ngSubmit)="updateNote()" class="card form">
+    <div class="form__row">
+      <div class="form__field">
+        <label>Note ID</label>
+        <input type="number" formControlName="notesID" readonly />
+      </div>
+      <div class="form__field form__field--grow">
+        <label>Notes</label>
+        <textarea rows="3" formControlName="visitNotes"></textarea>
+      </div>
+    </div>
+    <div class="form__actions">
+      <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Update</button>
+      <button type="button" class="btn" (click)="cancelEdit()">Cancel</button>
+    </div>
+  </form>
+}
+
+<!-- Notes Grid -->
+<div class="card">
+  <div class="ag-theme-quartz grid-wrap">
+    <ag-grid-angular
+      [rowData]="AllNotes || []"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [domLayout]="'autoHeight'"
+      [rowHeight]="38"
+      [headerHeight]="42"
+      [pagination]="true"
+      [paginationPageSize]="pageSize"
+      [overlayNoRowsTemplate]="'No notes to display'"
+      (gridReady)="onGridReady($event)"
+      (firstDataRendered)="onFirstDataRendered($event)"
+    ></ag-grid-angular>
+  </div>
+  <div class="grid-footer">Page size: {{ pageSize }} • Rows: {{ AllNotes?.length || 0 }}</div>
+</div>
+
+<!-- Modal: Items & Preview -->
+@if (sideOpen && selectedNote) {
+  <div class="modal-backdrop" (click)="closeItemsPanel()"></div>
+  <div class="modal">
+    <div class="modal__header">
+      <div>
+        <h3 class="modal__title">Items &amp; Preview</h3>
+        <div class="meta">
+          Note #{{ selectedNote?.notesID }} • Visit #{{ selectedNote?.visitID }} •
+          Finalized:
+          <span class="badge" [class.badge--ok]="selectedNote?.finalized" [class.badge--warn]="!selectedNote?.finalized">
+            {{ selectedNote?.finalized ? 'Yes' : 'No' }}
+          </span>
+        </div>
+      </div>
+      <button class="icon-btn" (click)="closeItemsPanel()" aria-label="Close">✕</button>
+    </div>
+
+    <div class="modal__body">
+      <!-- Add item -->
+      <form [formGroup]="addItemForm" (ngSubmit)="addItem()" class="add-line">
+        <div class="form__field form__field--grow">
+          <label>Rule</label>
+          <select formControlName="ruleID">
+            <option [ngValue]="null" disabled>Select rule</option>
+            @for (r of AllRules; track r.id) {
+              <option [ngValue]="r.id">{{ r.ruleName }} ({{ r.rulePrice | number:'1.0-0' }})</option>
+            }
+          </select>
+        </div>
+        <div class="form__field add-line__qty">
+          <label>Qty</label>
+          <input type="number" min="1" formControlName="quantity" />
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="addItemForm.invalid || selectedNote?.finalized">Add</button>
+      </form>
+
+      <!-- Items list -->
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Rule</th>
+              <th class="t-center">Qty</th>
+              <th class="t-right">Unit</th>
+              <th class="t-right">Total</th>
+              <th style="width:44px;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (it of noteItems; track it.itemID) {
+              <tr>
+                <td>{{ ruleNameById(it.ruleID) }}</td>
+                <td class="t-center">
+                  <input
+                    type="number"
+                    min="1"
+                    [disabled]="selectedNote?.finalized"
+                    [value]="it.quantity"
+                    (change)="updateQty(it, $any($event.target).value)"
+                    class="qty-input"
+                  />
+                </td>
+                <td class="t-right">{{ it.unitPrice | number:'1.0-0' }}</td>
+                <td class="t-right">{{ it.unitPrice * it.quantity | number:'1.0-0' }}</td>
+                <td class="t-center">
+                  <button class="icon-btn" (click)="removeItem(it)" [disabled]="selectedNote?.finalized" title="Remove">🗑</button>
+                </td>
+              </tr>
+            }
+            @if (!noteItems?.length) {
+              <tr><td colspan="5" class="t-empty">No items yet</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bill Preview -->
+      <div class="preview card--soft">
+        <h4>Bill Preview</h4>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th class="t-center">Qty</th>
+                <th class="t-right">Unit</th>
+                <th class="t-right">Line</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (ln of preview?.lines || []; track ln.description + '_' + ln.unitPrice) {
+                <tr>
+                  <td>{{ ln.description }}</td>
+                  <td class="t-center">{{ ln.quantity ?? '—' }}</td>
+                  <td class="t-right">{{ ln.unitPrice | number:'1.0-0' }}</td>
+                  <td class="t-right">{{ ln.lineTotal | number:'1.0-0' }}</td>
+                </tr>
+              }
+              @if (!preview?.lines?.length) {
+                <tr><td colspan="4" class="t-empty">No preview lines</td></tr>
+              }
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3" class="t-right total-label">Total</td>
+                <td class="t-right total-value">{{ preview?.total | number:'1.0-0' }}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="preview__actions">
+          <button type="button" class="btn" (click)="loadPreview(selectedNote!.notesID)">Refresh Preview</button>
+          <button type="button" class="btn btn-primary" (click)="finalize(selectedNote!.notesID)" [disabled]="selectedNote?.finalized">Finalize</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}

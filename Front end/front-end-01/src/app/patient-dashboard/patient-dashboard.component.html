@@ -1,0 +1,207 @@
+<h2 class="section-title">Patients</h2>
+
+<!-- Toolbar: Search + Page size -->
+<div class="toolbar" style="display:flex; gap:24px; align-items:flex-end; margin-bottom:12px;">
+  <div>
+    <label for="search-field">Search patient record here</label><br/>
+    <input
+      type="text"
+      id="search-field"
+      placeholder="Search by any column…"
+      [formControl]="searchFC"
+      style="min-width:320px;"
+    />
+  </div>
+
+  <div>
+    <label for="page-size">Records per page</label><br/>
+    <select id="pageSize" [value]="pageSize" (change)="changePageSize(($any($event.target).value))">
+      @for (sz of pageSizeOptions; track sz) {
+        <option [value]="sz">{{ sz }}</option>
+      }
+    </select>
+  </div>
+</div>
+
+<button (click)="activateForm()" class="add-btn">+Add New Patient</button>
+
+@defer (when AddBtnPressed) {
+  <form [formGroup]="addPatientForm" (ngSubmit)="onSubmit()" id="addPatientForm" class="patient-form">
+    <div>
+      <label for="patientID">Patient ID</label><br/>
+      <input formControlName="patientID" type="number" id="patientID" name="patientID" />
+      @if(AddForm['patientID'].touched && AddForm['patientID'].invalid){
+        <div class="err-msg">Enter a valid patient ID</div>
+      }
+    </div>
+
+    <div>
+      <label for="patientName">Patient Name</label><br/>
+      <input formControlName="patientName" type="text" id="patientName" name="patientName" />
+      @if(AddForm['patientName'].touched && AddForm['patientName'].invalid){
+        <div class="err-msg">Enter a valid patient Name</div>
+      }
+    </div>
+
+    <div>
+      <label for="patientEmail">Patient Email</label><br/>
+      <input formControlName="patientEmail" type="text" id="patientEmail" name="patientEmail" />
+      @if(AddForm['patientEmail'].touched && AddForm['patientEmail'].invalid){
+        @if(AddForm['patientEmail'].errors?.["required"]){
+          <div class="err-msg">Email is required</div>
+        }
+        @if(AddForm['patientEmail'].errors?.["minlength"]){
+          <div class="err-msg">Email must be at least {{AddForm['patientEmail'].errors?.['minlength'].requiredLength}} characters.</div>
+        }
+      }
+    </div>
+
+    <div>
+      <label for="patientPhone">Patient Phone</label><br/>
+      <input formControlName="patientPhone" type="text" id="patientPhone" name="patientPhone" />
+      @if(AddForm['patientPhone'].touched && AddForm['patientPhone'].invalid){
+        <div class="err-msg">Enter a valid patient Phone</div>
+      }
+    </div>
+
+    <div>
+      <label for="patientDescription">Patient Description</label><br/>
+      <textarea formControlName="patientDescription" id="patientDescription" name="patientDescription"></textarea>
+    </div>
+
+    <div>
+      <button [disabled]="!(addPatientForm.valid)" type="submit">Add Patient</button>
+      <button type="button" (click)="deactivateForm()">cancel</button>
+    </div>
+  </form>
+}
+
+@if(showDuplicatePanel){
+  <div class="dup-panel" style="margin:16px 0; padding:12px; border:1px solid #ddd; border-radius:8px; background:#fffaf0;">
+    <h3 style="margin:0 0 8px;">Possible duplicate(s) found</h3>
+    <p style="margin:0 0 8px;">
+      We found records that might match the patient you are adding. Review and choose an action.
+      @if(hardDuplicate){
+        <strong style="color:#b00020;">A hard conflict was found (same ID/email/phone). Submitting is disabled.</strong>
+      }
+    </p>
+
+    <table class="patients-table">
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Patient ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Why suggested</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (c of duplicateCandidates; track c.patient.patientID) {
+          <tr>
+            <td>{{ (c.score * 100) | number:'1.0-0' }}%</td>
+            <td>{{ c.patient.patientID }}</td>
+            <td>{{ c.patient.patientName }}</td>
+            <td>{{ c.patient.patientEmail }}</td>
+            <td>{{ c.patient.patientPhone }}</td>
+            <td>
+              <ul style="margin:0; padding-left:18px;">
+                @for (r of c.reasons; track r) {
+                  <li>{{ r }}</li>
+                }
+              </ul>
+            </td>
+            <td>
+              <button type="button" (click)="useExisting(c.patient)">Open existing</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <div style="display:flex; gap:8px; margin-top:10px;">
+      <button type="button" (click)="proceedAddAnyway()" [disabled]="hardDuplicate">Submit anyway</button>
+      <button type="button" (click)="cancelDuplicatePanel()">Cancel</button>
+    </div>
+  </div>
+}
+
+@if(EditBtnPressed){
+  <form [formGroup]="editPatientForm" (ngSubmit)="onEdit()" id="editPatientForm" class="patient-form">
+    <div>
+      <label for="patientID">Patient ID</label><br/>
+      <input formControlName="patientID" type="number" id="patientID" name="patientID" />
+      @if(EditForm['patientID'].touched && EditForm['patientID'].invalid){
+        <div class="err-msg">Enter a valid patient ID</div>
+      }
+    </div>
+
+    <div>
+      <label for="visitID">Visit ID</label><br/>
+      <input formControlName="visitID" type="number" id="visitID" name="visitID" />
+    </div>
+
+    <div>
+      <label for="patientName">Patient Name</label><br/>
+      <input formControlName="patientName" type="text" id="patientName" name="patientName" />
+      @if(EditForm['patientName'].touched && EditForm['patientName'].invalid){
+        <div class="err-msg">Enter a valid patient Name</div>
+      }
+    </div>
+
+    <div>
+      <label for="patientEmail">Patient Email</label><br/>
+      <input formControlName="patientEmail" type="text" id="patientEmail" name="patientEmail" />
+      @if(EditForm['patientEmail'].touched && EditForm['patientEmail'].invalid){
+        @if(EditForm['patientEmail'].errors?.["required"]){
+          <div class="err-msg">Email is required</div>
+        }
+        @if(EditForm['patientEmail'].errors?.["minlength"]){
+          <div class="err-msg">Email must be at least {{EditForm['patientEmail'].errors?.['minlength'].requiredLength}} characters.</div>
+        }
+      }
+    </div>
+
+    <div>
+      <label for="patientPhone">Patient Phone</label><br/>
+      <input formControlName="patientPhone" type="text" id="patientPhone" name="patientPhone" />
+      @if(EditForm['patientPhone'].touched && EditForm['patientPhone'].invalid){
+        <div class="err-msg">this can't be blank</div>
+      }
+    </div>
+
+    <div>
+      <label for="patientDescription">Patient Description</label><br/>
+      <textarea formControlName="patientDescription" id="patientDescription" name="patientDescription"></textarea>
+    </div>
+
+    <div>
+      <button [disabled]="!(editPatientForm.valid)" type="submit">Edit Patient Record</button>
+      <button type="button" (click)="deactivateEditForm()">cancel</button>
+    </div>
+  </form>
+}
+
+<!-- ✅ AG Grid: built-in sorting, filtering, pagination -->
+<div class="ag-theme-quartz" style="width:100%; border:1px solid #e0e0e0; padding-bottom:1px;">
+  <ag-grid-angular
+    [rowData]="AllPatients || []"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [domLayout]="'autoHeight'"
+    [rowHeight]="38"
+    [headerHeight]="42"
+    [pagination]="true"
+    [paginationPageSize]="pageSize"
+    [overlayNoRowsTemplate]="'No patients to display'"
+    (gridReady)="onGridReady($event)"
+    (firstDataRendered)="onFirstDataRendered($event)"
+  ></ag-grid-angular>
+</div>
+
+<!-- page size info -->
+<div style="margin-top:8px; font-size:12px; opacity:.75">
+  Page size: {{ pageSize }} • Rows: {{ AllPatients?.length || 0 }}
+</div>

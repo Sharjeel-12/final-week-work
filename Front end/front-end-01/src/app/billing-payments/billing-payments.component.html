@@ -1,0 +1,135 @@
+<h2 class="section-title">Payments</h2>
+
+<div class="card" style="margin-bottom:12px;">
+  <div class="row">
+    <label for="noteId">Visit Note ID</label>
+    <input id="noteId" type="number" [(ngModel)]="noteId" placeholder="e.g. 42" />
+    <button class="btn" (click)="load()">Load</button>
+  </div>
+  <div class="muted" *ngIf="message" style="margin-top:6px;">{{ message }}</div>
+</div>
+
+<!-- Summary -->
+<div class="summary-grid" *ngIf="summary">
+  <div class="summary-item">
+    <div class="label">Total</div>
+    <div class="value">{{ fmt(summary.total) }}</div>
+  </div>
+  <div class="summary-item">
+    <div class="label">Paid</div>
+    <div class="value">{{ fmt(summary.paid) }}</div>
+  </div>
+  <div class="summary-item">
+    <div class="label">Balance</div>
+    <div class="value" [class.positive]="summary.balance<=0" [class.negative]="summary.balance>0">
+      {{ fmt(summary.balance) }}
+    </div>
+  </div>
+</div>
+
+<!-- Stripe card + pay -->
+<div class="card" *ngIf="summary">
+  <div class="label">Card</div>
+  <div #cardHost id="card-element" class="card-host"></div>
+  <div class="hint">
+    <span [style.color]="cardMounted ? '#0a0' : '#b00'">●</span>
+    <span>{{ cardMounted ? 'Card ready' : 'Card not ready' }}</span>
+  </div>
+
+  <div class="pay-row">
+    <label>Amount to pay</label>
+    <input type="number"
+           [min]="0.5"
+           [max]="summary.balance || 0"
+           step="0.01"
+           [(ngModel)]="amountToPay"/>
+    <button class="btn primary"
+            [disabled]="!canPay()"
+            (click)="pay()">
+      {{ processing ? 'Processing…' : ('Pay ' + fmt(amountToPay || 0)) }}
+    </button>
+  </div>
+
+  <div class="muted" *ngIf="message" style="margin-top:6px;">{{ message }}</div>
+</div>
+<!-- cash payment  -->
+<!-- Payments table -->
+<div class="card" *ngIf="summary">
+<section class="bp-card">
+  <div class="bp-card__title">Payments</div>
+
+  <div class="bp-tablewrap">
+    <table class="bp-table">
+      <thead>
+        <tr>
+          <th style="min-width: 180px;">Date</th>
+          <th style="min-width: 90px;">Method</th>
+          <th>Reference</th>
+          <th class="t-right" style="min-width: 80px;">Amount</th>
+          <th style="min-width: 120px;">By</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (p of summary?.payments || []; track p.paymentID) {
+          <tr>
+            <td class="muted">{{ p.createdAt | date:'medium' }}</td>
+            <td>
+              <span class="bp-badge"
+                    [class.bp-badge--card]="p.method==='card'"
+                    [class.bp-badge--cash]="p.method==='cash'">
+                {{ p.method | titlecase }}
+              </span>
+            </td>
+            <td class="mono ref-cell" title="{{ p.reference || '—' }}">
+              {{ p.reference || '—' }}
+            </td>
+            <td class="t-right amount-cell">{{ fmt(p.amount) }}</td>
+            <td class="muted">{{ p.createdByName || p.createdBy || '—' }}</td>
+          </tr>
+        }
+
+        @if (!(summary?.payments?.length)) {
+          <tr class="bp-empty">
+            <td colspan="5">No payments yet.</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- CASH PAYMENT -->
+<div class="card" style="margin-top:12px;">
+  <div class="card-header">
+    <div class="title">Cash Payment</div>
+  </div>
+
+  <div class="row" style="gap:12px; align-items:flex-end;">
+    <div style="flex:1; min-width:200px;">
+      <label>Amount</label>
+      <input
+        type="number"
+        min="0.01"
+        step="0.01"
+        [max]="summary?.balance || null"
+        [(ngModel)]="cashAmount"
+        placeholder="e.g. 50.00"
+      />
+      <div class="hint">Balance: {{ summary?.balance | number:'1.2-2' }}</div>
+    </div>
+
+    <div style="flex:1; min-width:240px;">
+      <label>Reference (optional)</label>
+      <input type="text" [(ngModel)]="cashRef" placeholder="Receipt # / note" />
+    </div>
+
+    <div>
+      <button class="btn primary"
+              [disabled]="processingCash || (summary?.balance || 0) <= 0"
+              (click)="recordCash()">
+        @if (processingCash) { Saving… } @else { Record Cash }
+      </button>
+    </div>
+  </div>
+</div>
+</div>

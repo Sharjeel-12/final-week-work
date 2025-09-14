@@ -1,0 +1,154 @@
+.section-title { margin: 0 0 12px; }
+.card {
+  border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background: #fff;
+}
+.row { display: flex; gap: 8px; align-items: center; }
+.label { font-size: 12px; opacity: .7; margin-bottom: 4px; }
+.value { font-weight: 700; }
+.muted { opacity: .7; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.t-right { text-align: right; }
+.t-center { text-align: center; }
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 12px; margin-bottom: 12px;
+}
+.summary-item { @extend .card; }
+
+.card-host {
+  border: 1px solid #ccc; border-radius: 6px; padding: 10px; background: #fafafa;
+}
+.hint { font-size: 12px; margin-top: 6px; }
+
+.pay-row {
+  display: flex; gap: 8px; align-items: center; margin-top: 10px;
+}
+
+.btn {
+  padding: 6px 12px; border-radius: 6px; border: 1px solid #ccc; background: #f6f6f6;
+  cursor: pointer;
+  &.primary { background: #1976d2; color: #fff; border-color: #1976d2; }
+  &:disabled { opacity: .6; cursor: default; }
+}
+
+.value.positive { color: #0b8043; }
+.value.negative { color: #b00020; }
+
+
+/* Card shell */
+.bp-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  border: 1px solid #ececec;
+  padding: 14px 16px;
+}
+
+.bp-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Table */
+.bp-tablewrap {
+  overflow: auto; /* responsive scroll if narrow */
+}
+
+.bp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  thead th {
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 700;
+    color: #374151;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f2f2f2;
+    vertical-align: middle;
+  }
+
+  tbody tr:hover {
+    background: #fcfcff;
+  }
+
+  .bp-empty td {
+    text-align: center;
+    color: #6b7280;
+    padding: 22px 12px;
+    background: #fafbff;
+    font-style: italic;
+  }
+}
+
+/* Utilities */
+.t-right { text-align: right; }
+.muted   { color: #6b7280; }
+.mono    { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/* Clip long refs on narrow screens, show full in title tooltip */
+.ref-cell {
+  max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Money emphasis */
+.amount-cell {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* Badges */
+.bp-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  border: 1px solid transparent;
+}
+
+.bp-badge--card {
+  color: #0b7bb8;
+  background: rgba(11,123,184,.09);
+  border-color: rgba(11,123,184,.16);
+}
+
+.bp-badge--cash {
+  color: #0b8043;
+  background: rgba(11,128,67,.10);
+  border-color: rgba(11,128,67,.18);
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .bp-table thead { display: none; }
+  .bp-table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+    padding: 10px 8px;
+  }
+  .bp-table tbody td {
+    border: 0;
+    padding: 2px 0;
+  }
+  .bp-table .amount-cell { grid-column: 2 / 3; justify-self: end; }
+  .bp-table .ref-cell   { grid-column: 1 / -1; }
+}
+

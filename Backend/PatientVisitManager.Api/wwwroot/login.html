@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Patient Visit Manager - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="login-container card">
+        <h1>Patient Visit Manager</h1>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginError" class="error"></p>
+    </div>
+
+    <script src="api.js"></script>
+    <script>
+        const form = document.getElementById("loginForm");
+        const emailEl = document.getElementById("email");
+        const pwdEl = document.getElementById("password");
+        const errEl = document.getElementById("loginError");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            errEl.textContent = "";
+
+            const email = emailEl.value.trim();
+            const password = pwdEl.value.trim();
+
+            try {
+                const res = await apiPost("/auth/login", { email, password });
+                // Expected response: { token, role, email, expiresAt? }
+                localStorage.setItem("token", res.token);
+                localStorage.setItem("role", res.role);
+                localStorage.setItem("email", res.email || email);
+                if (res.expiresAt) localStorage.setItem("tokenExp", res.expiresAt);
+                window.location.href = "dashboard.html";
+            } catch (err) {
+                errEl.textContent = err.detail || err.message || "Login failed";
+            }
+        });
+    </script>
+</body>
+</html>
