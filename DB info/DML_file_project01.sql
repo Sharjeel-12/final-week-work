@@ -263,3 +263,76 @@ select * from ActivityLogs
 
 
 select * from users
+
+
+-- sprint 3 tables: -
+use MuhammadSharjeelFarzadDB
+
+CREATE TABLE dbo.rules ( 
+id INT IDENTITY(1,1) PRIMARY KEY, 
+RuleName VARCHAR(100) NOT NULL, -- labtest, xray, cbc, mri scan 
+RulePrice DECIMAL(10,2) NOT NULL ); 
+
+CREATE TABLE dbo.visitNotes ( 
+notesID INT IDENTITY(1,1) PRIMARY KEY, 
+visitID INT UNIQUE NOT NULL FOREIGN KEY REFERENCES dbo.visits(visitID), 
+visitNotes VARCHAR(2000) NOT NULL,
+ruleID INT NOT NULL FOREIGN KEY REFERENCES dbo.rules(id), 
+finalized INT NOT NULL DEFAULT 0 ); 
+
+
+CREATE TABLE dbo.billing ( 
+billingID INT IDENTITY(1,1) PRIMARY KEY, 
+notesID INT NOT NULL FOREIGN KEY REFERENCES dbo.visitNotes(notesID), 
+totalBill DECIMAL(10,2) NOT NULL );
+
+
+ALTER TABLE dbo.Visits
+  ADD status VARCHAR(20) NOT NULL CONSTRAINT DF_Visits_Status DEFAULT ('pending');
+-- done
+
+select * from visits
+
+
+INSERT INTO dbo.rules (RuleName, RulePrice)
+VALUES 
+  ('MRI Scan',   9500.00),
+  ('X-Ray',      2500.00),
+  ('Lab Test',   1500.00),
+  ('ECG',        1800.00),
+  ('Ultrasound', 4200.00);
+
+select * from billing
+delete from visitNotes
+
+
+
+CREATE TABLE dbo.visitNoteItems (
+    itemID     INT IDENTITY(1,1) PRIMARY KEY,
+    notesID    INT NOT NULL FOREIGN KEY REFERENCES dbo.visitNotes(notesID) ON DELETE CASCADE,
+    ruleID     INT NOT NULL FOREIGN KEY REFERENCES dbo.rules(id),
+    quantity   INT NOT NULL CONSTRAINT DF_visitNoteItems_qty DEFAULT (1) CHECK (quantity > 0),
+    unitPrice  DECIMAL(10,2) NOT NULL,  -- snapshot RulePrice at the time of adding
+    CONSTRAINT UX_visitNoteItems UNIQUE (notesID, ruleID)  -- 1 row per rule; use quantity to add more
+);
+
+
+ALTER TABLE dbo.visitNotes ALTER COLUMN ruleID INT NULL;
+
+-- payments table
+CREATE TABLE dbo.billingPayments (
+  paymentID   INT IDENTITY(1,1) PRIMARY KEY,
+  billingID   INT NOT NULL FOREIGN KEY REFERENCES dbo.billing(billingID),
+  amount      DECIMAL(10,2) NOT NULL CHECK (amount > 0),
+  method      VARCHAR(20) NOT NULL CHECK (method IN ('cash','card')),
+  reference   NVARCHAR(100)  NULL,    -- store Stripe charge/payment id here
+  createdBy   INT            NULL,
+  createdAt   DATETIME2      NOT NULL DEFAULT SYSUTCDATETIME()
+);
+
+-- Make Stripe reference idempotent (ignore webhook duplicates)
+CREATE UNIQUE INDEX UX_billingPayments_reference
+ON dbo.billingPayments(reference)
+WHERE reference IS NOT NULL;
+
+select * from billingPayments
